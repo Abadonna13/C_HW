@@ -13,3 +13,4 @@ while(currentValue <=  N)
     Console.Write(currentValue + " ");
     currentValue = 2; // currentValue = currentValue + 2
 }
+
