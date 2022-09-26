@@ -14,7 +14,7 @@ if (N < 1 || N > 7)
 }
 else
 {
-    if (N == 6 || N == 7)
+    if (N == 6 || N == 7) // if (N > 5)
     {
         Console.WriteLine("Ваходной");
     }
