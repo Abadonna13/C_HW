@@ -11,6 +11,6 @@ int currentValue = 2;
 while(currentValue <=  N)
 {
     Console.Write(currentValue + " ");
-    currentValue = 2; // currentValue = currentValue + 2
+   currentValue += 2; //   currentValue = currentValue + 2;
 }
 
