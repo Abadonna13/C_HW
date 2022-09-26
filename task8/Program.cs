@@ -6,11 +6,11 @@
 Console.WriteLine("Введите число");
 int N = Convert.ToInt32(Console.ReadLine());
 
-int currentValue = 2;
+int count = 2;
 
-while(currentValue <=  N)
+while(count <=  N)
 {
-    Console.Write(currentValue + " ");
-   currentValue += 2; //   currentValue = currentValue + 2;
+    Console.Write(count + " ");
+   count += 2;
 }
 
