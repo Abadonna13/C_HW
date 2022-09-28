@@ -6,11 +6,11 @@
 // 5 -> 1, 8, 27, 64, 125
 
 Console.WriteLine("Введите число N");
-int n = Convert.ToInt32(Console.ReadLine());
+int N = Convert.ToInt32(Console.ReadLine());
 
-if (n > 0)
+if (N > 0)
 {
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= N; i++)
     {
         Console.Write(i * i * i + " ");
     }
