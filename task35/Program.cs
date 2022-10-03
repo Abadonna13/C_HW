@@ -32,4 +32,4 @@ return Count;
 int[] array = GetArray(123, 0, 150);
 Console.WriteLine(string.Join(", ", array));
 int Cou = FindNumberOfElements(array, 10 , 99);
-Console.WriteLine($"Количество элементов {Cou}");
+Console.WriteLine($"Количество элементов в массиве значения которых лежат в отрезке [10,99] = {Cou}");
