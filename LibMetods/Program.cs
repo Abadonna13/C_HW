@@ -57,4 +57,34 @@ void PrintBinaryView(int number)
     Console.Write(number % 2);
 }
 
-//
+// Заполнение двухмерной матрицы рандом
+int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange = -10, int rightRange = 10)
+{
+    int[,] matrix = new int[rowsCount, columnsCount];
+
+    Random rand = new Random();
+
+    for(int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for(int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i,j] = rand.Next(leftRange, rightRange + 1);
+        }
+    }
+
+    return matrix;
+}
+
+
+// Вывод на печать матрицы
+void PrintMatrix(int[,] matrix)
+{
+    for(int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for(int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i,j]} ");
+        }
+        Console.WriteLine();
+    }
+}
