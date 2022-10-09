@@ -7,23 +7,17 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int ReadNum(string mess)
-{
-    Console.WriteLine(mess);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
 int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange = 0, int rightRange = 10)
 {
     int[,] matrix = new int[rowsCount, columnsCount];
 
     Random rand = new Random();
 
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i,j] = rand.Next(leftRange, rightRange + 1);
+            matrix[i, j] = rand.Next(leftRange, rightRange + 1);
         }
     }
 
@@ -32,9 +26,9 @@ int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange = 0, int rightRa
 
 void PrintMatrix(int[,] matrix)
 {
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             Console.Write($"{matrix[i, j]}\t");
         }
@@ -43,10 +37,24 @@ void PrintMatrix(int[,] matrix)
 }
 
 Random rand = new Random();
-int m = rand.Next(1,11); //количество строк
-int n = rand.Next(1,11); //количество столбцов
+int m = rand.Next(3, 6); //количество строк
+int n = rand.Next(3, 6); //количество столбцов
 int[,] matr = GetMatrix(m, n);
-int M = ReadNum("Введите номер сроки");
-int N = ReadNum("Введите номер столбца");
 PrintMatrix(matr);
 Console.WriteLine();
+
+double[] array = new double[matr.GetLength(1)];
+for (int j = 0; j < matr.GetLength(1); j++)
+{
+    int summ = 0;
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        summ += matr[i, j];
+    }
+    array[j] = (double)summ / (matr.GetLength(0));
+}
+foreach (double arr in array)
+{
+    Console.Write("{0,5:f1} ", arr);
+}
+//Console.WriteLine(string.Join(" ;",array));
