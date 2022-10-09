@@ -45,8 +45,8 @@ void PrintMatrix(int[,] matrix)
 }
 
 Random rand = new Random();
-int m = rand.Next(0,15); //количество строк
-int n = rand.Next(0,15); //количество столбцов
+int m = rand.Next(1,15); //количество строк
+int n = rand.Next(1,15); //количество столбцов
 int[,] matr = GetMatrix(m, n);
 int M = ReadNum("Введите номер сроки");
 int N = ReadNum("Введите номер столбца");
