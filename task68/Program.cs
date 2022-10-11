@@ -5,3 +5,23 @@
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
 
+int ReadNum(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+int Akker(int n, int m)
+{
+   
+  if (n == 0)
+    return m + 1;
+  else
+    if ((n != 0) && (m == 0)) return Akker(n - 1, 1);
+    else return Akker(n - 1, Akker(n, m - 1));
+}
+
+
+int M = ReadNum("Введите M");
+int N = ReadNum("Введите N");
+
+Console.WriteLine(Akker(M, N));
